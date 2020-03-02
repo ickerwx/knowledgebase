@@ -16,11 +16,17 @@
 ```
 
 ( 1) starte arm gdb auf dem Rechner
+
 ( 3) nutze BMP für debugging
+
 ( 5) wenn Vtarget voltage nicht verbunden ist, nutze internen voltage translator
+
 ( 6) scanne nach targets entweder mit JTAG oder SWD
+
 ( 8) attache an das target mit der Nummer n
+
 ( 9) mache memory außerhalb der bekannten memory map des Prozesses erreichbar (bspw. für memory mapped IO)
+
 (10) erstelle einen memory dump
 
 tags: hardware [black magic probe] rene
