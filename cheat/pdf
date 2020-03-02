@@ -1,0 +1,2 @@
+# To create a PDF of a webpage from the CLI:
+chromium-browser --headless --disable-gpu --print-to-pdf=output_file_name.pdf file:///path/to/your/html

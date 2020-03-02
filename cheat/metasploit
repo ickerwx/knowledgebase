@@ -1,0 +1,6 @@
+# add, use and delete workspace
+workspace -a <name>; workspace <name>; workspace -D <name>
+
+# meterpreter - migrate
+Note that migrating to the process of another (domain-) user will give you its permission context. This is a way to bypass interactive logon restrictions.
+migrate <pid>

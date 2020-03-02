@@ -1,0 +1,29 @@
+# To search a package:
+apt search package
+
+# To show package informations:
+apt show package
+
+# To fetch package list:
+apt update
+
+# To download and install updates without installing new package:
+apt upgrade
+
+# To download and install the updates AND install new necessary packages:
+apt dist-upgrade
+
+# To prevent a package from updating
+apt-mark hold <package>
+
+# To allow a package to resume updating
+apt-mark unhold <package>
+
+# Full command:
+apt update && apt dist-upgrade
+
+# To install a new package(s):
+apt install package(s)
+
+# To uninstall package(s)
+apt remove package(s)

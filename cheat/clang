@@ -1,0 +1,2 @@
+# To compile a program:
+clang++ -Wall -std=c++11 hello.cpp -o hello

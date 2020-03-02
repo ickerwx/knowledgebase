@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+
+import os
+import sys
+import re
+from helpers import createFileList, checkCwd
+
+def createTagFiles(filelist):
+    # this function reads the first line (Title) and last line (tags)
+    # from each file and creates tag files that link to the respective
+    # target file
+    if 'tags' not in os.listdir():
+        # we should be inside the knowledgebase root folder by now
+        # if not, something broke, sorry ...
+        print('tags directory not found, creating')
+        os.mkdir('tags')
+    os.chdir('tags')
+
+    # delete existing tag files
+    for f in os.listdir():
+        if f.endswith('.md'):
+            os.remove(f)
+
+    taglist = {}
+
+    for f in filelist:
+        h = open(f, 'r')
+        lines = h.readlines()
+        h.close()
+        if not (lines[0].strip().startswith('#') and lines[-1].strip().startswith('tags:')):
+            # if the file we just read doesn't have a heading at the start and a line
+            # starting with tags: at the end, we don't want to build an index for it
+            print("%s doesn't follow the formatting rules, skipping..." % f)
+            continue
+
+        title = lines[0].strip().lstrip('#')  # every file starts with a title, remove leading # and whitespaces
+
+        tagline = lines[-1].strip().lstrip('tags:')  # last line contains the tags
+        tags = [tag.lower() for tag in re.findall("\[(.*?)]", tagline)]  # find all tags inside []
+        tagline = re.sub("\[.*?]", "", tagline)  # remove tags inside [], replace them with space
+
+        tags.extend([tag.lower() for tag in tagline.split()])  # finally get the remaining tags
+
+        for tag in tags:
+            if tag in taglist.keys():
+                taglist[tag].append((title, f))
+            else:
+                taglist[tag] = [(title, f)]
+
+    for tag in taglist.keys():
+        h = open(tag + '.md', 'w')
+        h.write('# Notes tagged with %s\n' % tag)
+        for title, filename in taglist[tag]:
+            h.write("[{}]({})\n".format(title.strip(), filename))
+        h.close()
+
+
+def main():
+    checkCwd()
+
+    filelist = createFileList()
+    createTagFiles(filelist)
+
+
+if __name__ == '__main__':
+    main()

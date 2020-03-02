@@ -1,0 +1,11 @@
+# To see the help
+cheat -h
+
+# To list all available cheatsheets
+cheat -l
+
+# To limit the search results to cheatsheets containing the string pdf
+cheat -l pdf
+
+# To view the xpdf cheatsheet
+cheat xpdf

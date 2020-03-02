@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+import os
+import sys
+from helpers import checkCwd
+
+
+def createFolderList():
+    _, folders, _ = os.walk(os.getcwd()).__next__()
+    for line in [x.strip() for x in open('scripts/ignorefile').readlines()]:
+        if line.rstrip('/').strip() in folders:
+            folders.remove(line.rstrip('/'))
+    folders.remove('scripts')
+    return sorted(folders)
+
+
+def main():
+
+    checkCwd()
+    try:
+        template = open('scripts/template.md', 'r').read()
+    except:
+        template = """# 
+
+tags: %s
+"""
+    folderlist = createFolderList()
+    filename = None
+    folder = None
+    
+    if len(sys.argv) > 1:
+        if '/' in sys.argv[1]:
+            folder, filename = sys.argv[1].split('/', 1)
+        else:
+            filename = sys.argv[1]
+    
+    if folder is None:
+        print('Enter number or new category:')
+        for i, folder in enumerate(folderlist):
+            print('{}: {}'.format(i, folder))
+        inp = input('> ').strip()
+        if len(inp) == 0:
+            print('No input, exiting.')
+            sys.exit(0)
+
+        try:
+            # check if the input is a number
+            inp = int(inp)
+            if inp < 0 or inp > len(folderlist):
+                print('Please enter a valid number!')
+                sys.exit(1)
+        except ValueError:
+            # apparently not a number, ignore the error
+            pass
+
+        if type(inp) == int:
+            folder = folderlist[inp]
+        else:
+            folder = inp
+
+    if not folder in folderlist:
+        os.mkdir(folder)
+
+    if filename is None:
+        filename = input('Enter file name: ').strip()
+
+    if not filename.lower().endswith('.md'):
+        filename = filename + '.md'
+
+    if filename in os.listdir(folder):
+        print("File exists.")
+    else:
+        handle = open(os.path.join(folder, filename), 'w')
+        handle.write(template % folder)
+        handle.close()
+
+    os.system('/usr/bin/vim +startinsert! %s' % os.path.join(folder, filename))
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(0)

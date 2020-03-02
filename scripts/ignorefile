@@ -1,0 +1,10 @@
+# lines starting with # are comments
+# lines ending with / are treated as folders
+
+# do not remove these entries
+README.md
+template.md
+tags/
+.git/
+
+# you can add custom entries after this line

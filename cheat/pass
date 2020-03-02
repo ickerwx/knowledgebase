@@ -1,0 +1,23 @@
+# To initialize a password store:
+pass init <gpg-id>
+
+# To generate a secure password:
+pass generate <pass-name> <length>
+
+# To insert a password:
+pass insert <pass-name>
+
+# To insert a multi-line password (ie, aribtrary text):
+pass insert <pass-name> -m
+
+# To edit a password
+pass edit <pass-name>
+
+# To view a password:
+pass <pass-name>
+
+# To list all passwords:
+pass
+
+# To remove a password:
+pass rm <pass-name>

@@ -1,0 +1,163 @@
+#!/usr/bin/env python3
+
+import sys
+import argparse
+import re
+import os
+import shutil
+from tempfile import NamedTemporaryFile
+from helpers import createFileList, checkCwd
+from pprint import pprint
+
+
+''' Retrieve all cheats from a note file
+'''
+def getCheatsFromNote(fname):
+    cheats = []
+    with open(fname) as f:
+        lines = f.readlines()
+        cheatFound = False
+        cheatBlock = ""
+        cheatLineNumber = None
+        for index, line in enumerate(lines):
+            # a cheat in a note looks like this:
+            # ```lang cheat name Here is the topic
+            # the body can have multiple lines and is enclosed in triple backticks.
+            # ```
+            #
+            # cheat is the keyword; lang, name, topic and body are the four parts of a cheat block
+            startmatch = re.search("```\w*\s*cheat", line)  # find code block that contains cheat in the starting line
+            if startmatch:
+                cheatFound = True
+                cheatLineNumber = index + 1
+            if cheatFound:
+                # append each line in a cheat block to cheatBlock
+                cheatBlock += line                
+                if line.strip().endswith("```"):
+                    # we have found the closing line of the cheat block. Now use a regex to find each part of the cheat
+                    match = re.search('```(\w*)\s*cheat\s(.*?)\s(.*)\n([\w\W]+)```', cheatBlock, re.M)
+                    result=dict()
+                    try:
+                        result['lang'] = match.group(1)
+                        result['name'] = match.group(2)
+                        result['topic'] = match.group(3)
+                        result['body'] = match.group(4)
+                        cheats.append(result)  
+                        cheatBlock = ""
+                        cheatFound = False          
+                    except:
+                        print('Error processing cheat block in', fname, 'starting at line', cheatLineNumber)
+                        pass
+    return cheats
+
+
+''' Get all notes (markdown files) from the knowledgebase
+'''
+def getAllNotes():
+    return [os.path.join(dp, f) for dp, dn, filenames in os.walk('.') for f in filenames if os.path.splitext(f)[1] == '.md']
+
+
+def prettyPrint(cheats, args):
+    # print all cheat sheets using the bat tool
+    alloutputs = ""
+    for cheat in cheats:
+        # each cheat is a dict with four keys: lang, name, topic, body
+        output = "# "+cheat['topic'] + "\n"
+        if cheat['lang'] == '':
+            output += cheat['body'] 
+        else:
+            output += "```"+  cheat['lang'] + "\n" + cheat['body'] + "```"
+        alloutputs += output + '\n\n'
+    f = NamedTemporaryFile(delete=True)
+    f.write(str.encode(alloutputs))
+    f.flush()
+    os.system('bat --language md --paging never --style=plain %s %s' % ('--color never' if args.nocolor else '',f.name))
+    f.close()
+
+
+def listLegacySheets(args):
+    # this will check for old cheat sheets in $KBHOME/cheat/. If it finds a match, it will print a notification
+    checkCwd()  # return to $KBHOME
+    
+    os.chdir('cheat')
+
+    for _, _, names in os.walk('.'):
+        for name in names:
+            if args.cheatsheet is not None:
+                if args.list is True:
+                    if args.cheatsheet in name:
+                        print('Legacy cheat sheet:', name)
+                else:
+                    if args.cheatsheet == name:
+                        print('Legacy cheat sheet:', name)
+
+
+def printLegacySheet(args):
+    # user wants to open a legacy sheet in $KBHOME/cheat/.
+    checkCwd()
+    os.chdir('cheat')
+    for _, _, names in os.walk('.'):
+        for name in names:
+            if args.cheatsheet == name.lower():          
+                os.system('bat --language md --paging never --style=plain %s %s' % ('--color never' if args.nocolor else '', name))
+                return
+    print('No cheats found')
+        
+
+def main():
+    parser = argparse.ArgumentParser(description='Show command cheatsheets')
+    parser.add_argument('-n', '--nocolor', dest='nocolor', help='Do not use colored output', action='store_true', default=False)
+    parser.add_argument('-l', '--list', dest='list', help='List available cheatsheets.', action='store_true', default=False)
+    parser.add_argument('-o', '--old', dest='old', help='Print legacy cheat sheet', action='store_true', default=False)
+    parser.add_argument('cheatsheet', nargs='?', help='Thing to look for')
+    args = parser.parse_args()
+    checkCwd()
+
+    if args.old:
+        printLegacySheet(args)
+        sys.exit()
+    else:
+        # generic process:
+        #   read all available notes into a list called notes
+        #   iterate over each note and find blocks tagged as cheats
+        #   if the user specified -l, create a list of cheat names, else create a list of dict with each cheat as a dict
+        #   list all legacy sheets that match the search term
+        #   finally print the list of cheat names, or the list of extracted cheat blocks
+        allCheats = []
+        notes = getAllNotes()
+        for note in notes:
+            cheats = getCheatsFromNote(note)
+            if len(cheats) > 0:
+                for cheat in cheats:
+                    if args.list is True:
+                        # this part is executed when the user specified -l
+                        if args.cheatsheet is None or args.cheatsheet in cheat['name']:
+                            # user either didn't give a search term, or the term is a substring of a cheat name
+                            if cheat['name'] not in allCheats:
+                                allCheats.append(cheat['name'])
+                    else:
+                        # user did not pass -l
+                        if cheat['name'] == args.cheatsheet: 
+                            allCheats.append(cheat)
+
+
+        if len(allCheats) > 0:
+            # always print a list of legacy sheets at the top
+            listLegacySheets(args)
+            if args.list is True:
+                # again, this part is onlye executed when the user specified -l
+                for cheatName in sorted(allCheats): 
+                    print(cheatName)
+            else:
+                # attention: in the case above allCheats is a list of strings, but in
+                # this part of the code it's a list of dict
+                prettyPrint(allCheats, args)
+        else:
+            print("No cheats found.")
+    
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(0)

@@ -1,0 +1,2 @@
+# To extract a phar file:
+phar extract -f the-file.phar

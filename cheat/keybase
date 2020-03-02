@@ -1,0 +1,5 @@
+# to verify identity proofs
+keybase id <username>
+
+# to track a user
+keybase track <username>

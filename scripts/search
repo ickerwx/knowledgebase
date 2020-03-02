@@ -1,0 +1,173 @@
+#!/usr/bin/env python3
+
+import sys
+import argparse
+import re
+import os
+import shutil
+from termcolor import colored
+from helpers import createFileList, checkCwd
+
+
+def printSearchResults(filelist, args):
+    resultFiles = []
+    fileIndex = 0
+
+    if args.wordonly:
+        regex = r"\b(%s)\b" % args.searchterm
+    else:
+        regex = "(%s)" % args.searchterm
+
+    if args.casesensitive:
+        flags = 0
+    else:
+        flags = re.IGNORECASE
+
+    for file in filelist:
+        if args.searchtag is True:
+            # we are searching for tags
+            if re.findall(regex, file, flags=flags) == []:
+                # the current file does not contain the searchterm, try the next file in the filelist
+                continue
+
+            # this file contains the searchterm, read each line of the file
+            # the first line is the header, the other lines are links to the note files
+            lines = open(file).readlines()
+
+            # print colored result header
+            # I kept the color code inside the regex, it's just easier to implement this way
+            print(colored("+=~----------\n|%s\n| %s\n+=~----------" % (file, re.sub(regex, "\033[31;1m\\1\033[32;1m", lines[0], flags=flags).strip()), 'green'))
+
+            # print each tagged file title and path
+            for line in lines[1:]:
+                # line contains data formatted like [title](filepath)
+                match = re.match('\[(.*?)\]\((.*?)\)', line)
+                if match is not None:
+                    title, filepath = match.groups()
+                    resultFiles.append(filepath)
+                    filename = colored(os.path.basename(filepath), 'blue')
+                    filepath = filepath[:filepath.rfind(os.path.basename(filepath))] + filename
+                    print('┌─ %d:  %s\n└─ %s\n' % (fileIndex, filepath, colored(title, 'green')))
+                    fileIndex += 1
+        else:
+            # we are not searching for tags
+            printFilenameHeader = True
+            with open(file, 'r') as handle:
+                lines = handle.readlines()
+                for lineno, line in enumerate(lines):
+                    if args.searchheading is True and not line.strip().startswith('#'):
+                        # we only want to search through headings and the current line is not a heading
+                        continue
+                    if re.findall(regex, line, flags=flags) != []:
+                        # I kept the color code inside the regex, it's just easier to implement this way
+                        l = re.sub(regex, "\033[31;1m\\1\033[0m", line, flags=flags)
+                        if printFilenameHeader:
+                            printFilenameHeader = False
+                            resultFiles.append(file)
+                            filename = colored(os.path.basename(file), 'blue')
+                            filepath = colored(file[:file.rfind(os.path.basename(file))], 'green') + filename
+                            print(colored("+=~----------\n| %d:  " % fileIndex, 'green') + "%s\n" % filepath + colored("| %s\n+=~----------" % lines[0].strip(), 'green'))
+                            fileIndex += 1
+                        try:
+                            if lineno > 0 and not args.searchheading:
+                                print("%d: %s" % (lineno, lines[lineno - 1].strip()))
+                        except IndexError:
+                            pass
+
+                        print("%d: %s" % (lineno + 1, l.strip()))
+
+                        try:
+                            if not args.searchheading:
+                                print("%d: %s\n" % (lineno + 2, lines[lineno + 1].strip()))
+                            else:
+                                print('\n')
+                        except IndexError:
+                            pass
+    return resultFiles
+
+
+def queryOpenFile(args, results):
+    exit = False
+    while not exit:
+        answer = input('Enter number to open or anything else to quit: ')
+
+        if len(answer.strip()) > 0:
+            try:
+                answer = int(answer)
+                if answer < 0 or answer > len(results) - 1:
+                    raise ValueError()
+            except (ValueError, TypeError):
+                exit = True
+                break
+
+            try:
+                # I set LESS on my system to auto-close if the file is small enough
+                # I do not want this in this particular case, so I remove all these flags
+                # from the LESS variable. I also remove other flags that I do not like in this
+                # particular use case
+                # I don't know a command line switch that overrides this behavior, therefore this hack
+                less = os.environ['LESS']
+                less = re.sub("-e|-E|-F|-X|-S", "", less)
+                less = 'LESS="%s"' % less.strip()
+                if len(less) == 7:  # it is possible that all that is left is LESS=""
+                    less = "LESS=-R"
+            except KeyError:
+                # LESS is not set, we need at least -R for colors
+                less = "LESS=-R"
+
+            if args.casesensitive is False:
+                if less.endswith('"'):
+                    less = less[:-1]  # remove the trailing "
+                    less += 'I"'
+                else:
+                    less += 'I'
+
+            try:
+                batpath = shutil.which('bat')
+            except AttributeError:
+                # shutil does not support which
+                batpath = None
+
+            if batpath is None:
+                lessopen = ''
+            else:
+                lessopen = 'LESSOPEN="|{} --language=md --style=plain --color=always %s"'.format(batpath)
+
+            if args.searchtag is True:
+                # if searching for tags I don't want to jump to the search string
+                call = '{} {} /usr/bin/less {}'.format(lessopen, less, results[answer])
+            else:
+                if args.wordonly:
+                    searchterm = r'\\b%s\\b' % args.searchterm
+                else:
+                    searchterm = args.searchterm
+                call = '{} {} /usr/bin/less +/{} {}'.format(lessopen, less, searchterm, results[answer])
+            os.system(call)  # I know this is insecure, ~~don't care~~I accept the risk
+        else:
+            exit = True
+
+
+def main():
+    checkCwd()
+
+    parser = argparse.ArgumentParser(description='Search through the knowledgebase')
+    parser.add_argument('-w', '--word', dest='wordonly', help='Search for word only, no substring search', action='store_true', default=False)
+    parser.add_argument('-c', '--case', dest='casesensitive', help='Search is case-sensitive', action='store_true', default=False)
+    parser.add_argument('-t', '--tag', dest='searchtag', help='Search through tags', action='store_true', default=False)
+    parser.add_argument('-e', '--heading', dest='searchheading', help='Only search headings (lines starting with #)', action='store_true', default=False)
+    parser.add_argument('searchterm', help='Thing to look for')
+    args = parser.parse_args()
+
+    filelist = createFileList(args.searchtag)
+    results = printSearchResults(filelist, args)
+    if results != []:
+        queryOpenFile(args, results)
+    else:
+        print('%s not found' % args.searchterm)
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(0)
