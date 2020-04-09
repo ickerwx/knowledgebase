@@ -46,4 +46,15 @@ git submodule update --remote --recursive
 git log -1 --reverse --pretty=oneline filename
 ```
 
+## Add SSL Cert authentication to git
+
+First create a folder `certs` and move certificate, key and ca cert there. Then:
+
+```sh cheat git add SSL cert authentication
+git config --local http.sslCAInfo certs/ca.crt
+git config --local http.sslCert certs/cert.crt
+git config --local http.sslKey certs/key.pem
+git config --local http.sslVerify false or maybe don't do that
+```
+
 tags: programming git cheat

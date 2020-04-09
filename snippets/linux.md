@@ -21,7 +21,7 @@ for k, v in bsddb.btopen("filename.db").iteritems():
 
 ## OpenSSL one-liner to create a self-signed cert for 10 years
 
-```sh
+```sh cheat openssl Create self-signed cert
 openssl req -new -newkey rsa:4096 -days 3650 -nodes -x509 -keyout server.key -out server.crt
 ```
 
@@ -120,6 +120,14 @@ openssl pkcs12 -export -out certificate.pfx -inkey cert-privkey.crt -in cert-pic
 ```bash cheat openssl convert PKCS7 to PKCS12
 openssl pkcs7 -in cert-p7b-file.p7b -out smime-cert.pem -print_certs`
 openssl pkcs12 -export -inkey cert-p7b-priv.key  -in smime-cert.pem -name Smime-SymantecTest -out smime-Final.pfx
+```
+
+## Extract data from PKCS12 certificate
+
+```bash cheat openssl Extract CA, cert and key from PKCS12
+openssl pkcs12 -in file.pfx -clcerts -nokeys -out cert.crt
+openssl pkcs12 -in file.pfx -nocerts -nodes -out key.pem
+openssl pkcs12 -in file.pfx -cacerts -nokeys -out ca.crt
 ```
 
 tags: linux snippets python openssl postgresql awk
