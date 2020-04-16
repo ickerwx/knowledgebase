@@ -25,7 +25,7 @@ Lab:
 * TDO in JTAG ist TDO des letzten Chip in der Kette
 #### JTAG state machine
 
-![JTAG State Machine](../pictures/JTAG state machine.png)
+![JTAG State Machine](../pictures/JTAG_state_machine.png)
 * Fragen
   * How can I find out IR length? Are IR all fixed length?
 __Notes__
@@ -58,7 +58,7 @@ BP ist zu langsam, "Can't keep up"
 ### SPI mit Shikra
 Shikra anstelle von BP verwendet
 
-![Shikra Pinouts](../pictures/Shikra Pinouts.jpg)
+![Shikra Pinouts](../pictures/Shikra_Pinouts.jpg)
 
 mit `flashrom -p ft2232_spi:type=232H -r dump.bin` versucht, Speicher auszulesen, funktioniert nicht
 ```
