@@ -1,5 +1,8 @@
-# List contents of RPM
-rpm2cpio foo.rpm | cpio -vt
+---
+tags: [ packaging ]
+---
+# To list contents of an RPM:
+rpm2cpio <rpm-file> | cpio -vt
 
-# Extract contents of RPM
-rpm2cpio foo.rpm | cpio -vid
+# To extract contents of an RPM:
+rpm2cpio <rpm-file> | cpio -vid
