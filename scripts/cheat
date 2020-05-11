@@ -36,13 +36,18 @@ def getCheatsFromNote(fname):
                 if line.strip().endswith("```"):
                     # we have found the closing line of the cheat block. Now use a regex to find each part of the cheat
                     match = re.search('```(\w*)\s*cheat\s(.*?)\s(.*)\n([\w\W]+)```', cheatBlock, re.M)
-                    result=dict()
                     try:
-                        result['lang'] = match.group(1)
-                        result['name'] = match.group(2)
-                        result['topic'] = match.group(3)
-                        result['body'] = match.group(4)
-                        cheats.append(result)  
+                        # we check if the name uses a |. You can use the pipe to find a certain cheat with multiple titles.
+                        # using "cheat foo|bar A certain topic" will make this cheat appear by using either "cheat foo" 
+                        # or "cheat bar" at the command line.
+                        names = match.group(2).split('|')
+                        for name in names:
+                            result=dict()
+                            result['name'] = name
+                            result['lang'] = match.group(1)
+                            result['topic'] = match.group(3)
+                            result['body'] = match.group(4)
+                            cheats.append(result)  
                         cheatBlock = ""
                         cheatFound = False          
                     except:
@@ -66,10 +71,10 @@ def prettyPrint(cheats, args):
         if cheat['lang'] == '':
             output += cheat['body'] 
         else:
-            output += "```"+  cheat['lang'] + "\n" + cheat['body'] + "```"
+            output += "```"+  cheat['lang'] + "\n" + cheat['body'].rstrip() + "\n```"
         alloutputs += output + '\n\n'
     f = NamedTemporaryFile(delete=True)
-    f.write(str.encode(alloutputs))
+    f.write(str.encode(alloutputs.rstrip()))
     f.flush()
     os.system('bat --language md --paging never --style=plain %s %s' % ('--color never' if args.nocolor else '',f.name))
     f.close()

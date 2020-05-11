@@ -166,3 +166,23 @@ cpdf
 pdf
 pdftk
 ```
+
+To add your own cheats, simply add the following to a codeblock:
+
+````
+```sh cheat foo A topic
+some text inside your code block.
+```
+````
+
+The `sh` is optional to enable syntax highlighting, then followed by the magic word `cheat`. The next word is the search term you want to use. In the above example you could run `$ cheat foo` from the command line and find this particular cheat sheet.
+
+You can also use a `|` to make the cheat appear under multiple search terms:
+
+````
+```sh cheat foo|bar A topic
+some text inside your code block.
+```
+````
+
+Using this, you could find the same cheat using either `$ cheat foo` or `$ cheat bar` from the command line. The search term must not contain spaces, the topic may use them.
