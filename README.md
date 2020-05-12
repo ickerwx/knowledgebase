@@ -131,13 +131,13 @@ If you happen to use [bat](https://github.com/axiros/terminal_markdown_viewer), 
 
 ### cheat
 
-You can use the `cheat` command to look for cheat sheets. These are little snippets of code to help you remember how to use a command etc. It was very much inspired by [cheat](https://github.com/chrisallenlane/cheat). For now, cheat is hard-coded to use a great paging tool called [bat](https://github.com/sharkdp/bat). This may change in the future, but probably won't. To use `cheat` you need to have `bat` in your `$PATH`.    
+You can use the `cheat` command to look for cheat sheets. These are little snippets of code to help you remember how to use a command etc. It was very much inspired by [cheat](https://github.com/cheat/cheat). For now, cheat is hard-coded to use a great paging tool called [bat](https://github.com/sharkdp/bat). This may change in the future, but probably won't. To use `cheat` you need to have `bat` in your `$PATH`.    
 
 Use the `-l` switch to list available cheatsheets. You can use `-l substring` to limit search results.
 
 ```
 $ cheat -h
-usage: cheat [-h] [-n] [-l] [cheatsheet]
+usage: cheat [-h] [-n] [-l] [-o] [cheatsheet]
 
 Show command cheatsheets
 
@@ -147,27 +147,24 @@ positional arguments:
 optional arguments:
   -h, --help     show this help message and exit
   -n, --nocolor  Do not use colored output
-  -l, --list     List available cheatsheets
+  -l, --list     List available cheatsheets.
+  -o, --old      Print legacy cheat sheet
 
-$ cheat -n jq
-# Pretty print the json
-jq "." < filename.json
-<snip>
-jq '.[-2:]'
-
-# filter json by key
-make-json | jq -c 'select(.keyname == value)' | jq .
-
+$ cheat -n sip
+# enumerate
+```bash
+svmap <ip>
+svwar -m INVITE -e200-250 <ip>
+``
 $ cheat -l | wc -l
-201
+51
 
-$ cheat -l pdf
-cpdf
-pdf
-pdftk
+$ cheat -l win
+windows
+winrm
 ```
 
-To add your own cheats, simply add the following to a codeblock:
+The tool parses all your notes and uses code blocks that follow a special syntax as cheat sheets. When you write a note and want to use a code block as a cheat sheet, simply add the following to a codeblock:
 
 ````
 ```sh cheat foo A topic
@@ -186,3 +183,5 @@ some text inside your code block.
 ````
 
 Using this, you could find the same cheat using either `$ cheat foo` or `$ cheat bar` from the command line. The search term must not contain spaces, the topic may use them.
+
+The folder `cheat/` contains cheat sheets from the [cheat/cheatsheets](https://github.com/cheat/cheatsheets) repo, but not as a submodule (I should probably do that some time...). By default, `cheat` will not use these cheat sheets but only the inline cheats from the notes. If you want to use these what I call legacy cheat sheets, use the `-o` command line argument.
