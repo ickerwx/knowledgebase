@@ -4,6 +4,7 @@
 # do not remove these entries
 README.md
 template.md
+templates/
 tags/
 .git/
 

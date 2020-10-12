@@ -57,8 +57,14 @@ def createTagFiles(filelist):
 
 def main():
     checkCwd()
-
     filelist = createFileList()
+
+    try:
+        # turn the links into relative paths
+        filelist = [f.replace(os.environ['KBHOME'], '../') for f in filelist]
+    except KeyError:
+        # $KBHOME is not set
+        pass
     createTagFiles(filelist)
 
 
