@@ -42,4 +42,4 @@ http://www.darkoperator.com/blog/2013/3/5/powershell-basics-execution-policy-par
 http://www.nivot.org/blog/post/2012/02/10/Bypassing-Restricted-Execution-Policy-in-Code-or-in-Scriptfrom
 http://www.powershellmagazine.com/2014/07/08/powersploit/
 
-tags: powershell snippets pentest windows
+tags: #powershell #snippets #pentest #windows 

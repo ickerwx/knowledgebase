@@ -26,4 +26,4 @@ def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, 
 
 shamelessly stolen from https://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console
 
-tags: programming python rene
+tags: #programming #python #rene 

@@ -8,4 +8,4 @@ https://www.ernw.de/newsfeed/ernw-white-paper-58-january-2017-incident-handling-
 
 http://www.redblue.team/2015/09/spotting-adversary-with-windows-event.html
 
-tags: blueteam links
+tags: #blueteam #links 

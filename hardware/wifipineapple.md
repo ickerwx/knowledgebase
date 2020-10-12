@@ -24,4 +24,4 @@ pin9 |o o| pin10
 +-------+  3: RX
  1 2 3 4   4: Vcc
 ```
-tags: hardware JTAG hak5 reversing
+tags: #hardware #jtag #hak5 #reversing 

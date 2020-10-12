@@ -30,4 +30,4 @@ python tplmap.py -u 'http://<rhost>:<rport>' -X POST -d '<post data>, mark injec
 
 * https://portswigger.net/blog/server-side-template-injection
 
-tags: ssti tplmap jinja2 twig
+tags: #ssti #tplmap #jinja2 #twig 

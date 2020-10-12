@@ -13,4 +13,4 @@ wfuzz -w sql-list -d 'username=admin&password=FUZZ' http://x.x.x.x/login.php/
 
 ##
 
-tags: web login bypass sql wfuzz christian
+tags: #web #login #bypass #sql #wfuzz #christian 

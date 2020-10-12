@@ -7,4 +7,4 @@
 * confuserexstringdecryptor
 * confuserexswitchkiller
 
-tags: windows programming dotnet reversing
+tags: #windows #programming #dotnet #reversing 

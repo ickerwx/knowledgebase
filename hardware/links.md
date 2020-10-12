@@ -13,4 +13,4 @@ http://www.sp3ctr3.me/hardware-security-resources/
 [Run a simple ARM VM in qemu](https://github.com/nongiach/arm_now)
 
 
-tags: hardware links [smart meter] iot reversing arm qemu
+tags: #smart_meter #hardware #links #iot #reversing #arm #qemu 

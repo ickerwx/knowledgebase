@@ -79,4 +79,4 @@ sudo apt-get install php7.0 php5.6 php5.6-mysql php-gettext php5.6-mbstring php-
 sudo update-alternatives --set php /usr/bin/php5.6
 ```
 
-tags: php
+tags: #php 

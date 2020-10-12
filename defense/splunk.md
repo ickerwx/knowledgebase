@@ -140,4 +140,4 @@ coffee4y.com
   - Debugger geht nicht auf die Container/d-Limitierung
   - Scheint auch ein anstrengendes Lizenzmodell zu haben, man zahlt für Events pro Tag
 
-tags: blueteam splunk training phantom
+tags: #blueteam #splunk #training #phantom 

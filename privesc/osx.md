@@ -8,4 +8,4 @@ Empire supports some payloads for OSX.
 * `osx/prompt` for a simple password grabbing prompt
 * `osx/webcam` take pictures
 
-tags: osx privesc
+tags: #osx #privesc 

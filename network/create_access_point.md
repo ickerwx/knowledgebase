@@ -16,4 +16,4 @@ create_ap -w 2 -m nat wlan0 eth1 APNAMEfoobar Passwordfoobar
 create_ap -w 2 wlan0 wlan0 Test-AP password
 ```
 
-tags: wifi ap hotspot [Access Point]
+tags: #access_point #wifi #ap #hotspot 

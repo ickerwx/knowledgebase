@@ -6,4 +6,4 @@ sudo -u www-data php updater/updater.phar
 sudo -u www-data php php occ upgrade
 ```
 
-tags: linux nextcloud
+tags: #linux #nextcloud 

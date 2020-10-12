@@ -4,4 +4,4 @@ das Problem mit dem nicht mehr funktionierenden Resizen der Auflösung bei der K
 
 ```svga.autodetect = "TRUE"```
 
-tags: vmware admin
+tags: #vmware #admin 

@@ -21,4 +21,4 @@ mount -o ro /dev/sdb1 /mnt/
 cat /proc/partitions
 ```
 
-tags: iscsi
+tags: #iscsi 

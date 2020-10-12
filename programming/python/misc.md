@@ -20,4 +20,4 @@ Gives score depending on how conform you are to the pep style guide.
 * pip install pylint
 * `pylint <filename>`
 
-tags: python misc pylint pep hash
+tags: #python #misc #pylint #pep #hash 

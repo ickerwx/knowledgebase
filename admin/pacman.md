@@ -23,4 +23,4 @@ pacman -Qe
 pacman -Qdt
 ```
 
-tags: admin pacman [Arch Linux] Linux
+tags: #arch_linux #admin #pacman #linux 

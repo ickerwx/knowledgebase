@@ -14,4 +14,4 @@ autoconf
 ## Static Compilation with cmake
 For static compilation with cmake use cmake-gui and disable shared library building.
 
-tags: c
+tags: #c 

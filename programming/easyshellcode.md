@@ -13,4 +13,4 @@ char main[] = { /* shellcode here  */ }
 Run with setarch x86_64 -R so we disable ASLR
 ```
 
-tags: programming exploitation shellcode linux
+tags: #programming #exploitation #shellcode #linux 

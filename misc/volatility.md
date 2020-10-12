@@ -11,4 +11,4 @@ volatility -f xx.dmp imageinfo
 volatility -f xxx.dmp --profile Win2012R2x64 hashdump
 ```
 
-tags: RAM dump volatility ippsec silo christian
+tags: #ram #dump #volatility #ippsec #silo #christian 

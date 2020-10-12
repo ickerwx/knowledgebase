@@ -25,4 +25,4 @@ CONCLUSION: The device and system can't be immediately compromised. But in the e
 Once again, the problem is adversarial research has conditioned vendors to ignore these level of findings. They aren't remote root access, not every device has been compromised. So often, these issues will not be fixed.
 This is a real problem. The solution isn't pen-testing and remediation. The solution is secure development practices. All of these are known.
 
-tags: iot hardware links
+tags: #iot #hardware #links 

@@ -72,4 +72,4 @@ Example: Take a connection on 5000 and redirect it to <target ip>:5001
 ./socat tcp-listen:5000,reuseaddr,fork tcp:<target ip>:5001
 
 
-tags: pivot forwarding meterpreter
+tags: #pivot #forwarding #meterpreter 

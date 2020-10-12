@@ -29,4 +29,4 @@
 
 (10) erstelle einen memory dump
 
-tags: hardware [black magic probe] rene
+tags: #black_magic_probe #hardware #rene 

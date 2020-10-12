@@ -61,4 +61,4 @@ funktioniert nicht, stderr geht noch immer ins Terminal.
 ```
 so geht's. Grund ist, dass wenn die redirection für 2 ausgewertet wird, zeigt 1 noch immer auf's Terminal und wird erst danach umgeleitet. Im zweiten Fall ist das nicht so, hier wird zuerst 1 umgeleitet, danach 2 dahin, wo 1 jetzt hinzeigt.
 
-tags: pentest solaris [vulnerability assessment] snippets
+tags: #vulnerability_assessment #pentest #solaris #snippets 

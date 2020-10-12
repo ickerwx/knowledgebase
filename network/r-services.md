@@ -11,4 +11,4 @@ user host # strict config
 /etc/hosts.equiv
 ```
 
-tags: R-Service remote [Berkeley Remote]
+tags: #berkeley_remote #r-service #remote 

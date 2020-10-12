@@ -14,4 +14,4 @@ b.Write a.nodeTypedValue
 b.SaveToFile "foo.jar",2
 ```
 
-tags: VBScript
+tags: #vbscript 

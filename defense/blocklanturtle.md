@@ -74,4 +74,4 @@ Whenever a new network device gets plugged in it will fail!
 ## Final Caveat
 I suspect there will be ways around this, like any mitigation.  However my feelings are that if you can force the bad guys to up their game and screw over the skiddies who don't what they are doing, both of those are a net win.  There will always be a window one could use to bypass a door... 
 
-tags: blueteam hardware pentest windows links gpo
+tags: #blueteam #hardware #pentest #windows #links #gpo 

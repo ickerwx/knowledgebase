@@ -318,4 +318,4 @@ class AESCTR(object):
         self.keystream = self._generateKeyStream(self.counter)
 ```
 
-tags: Python Cryptopals
+tags: #python #cryptopals 

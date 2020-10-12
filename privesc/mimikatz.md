@@ -31,4 +31,4 @@ kerberos::ptt <filename>
 
 * https://github.com/DanMcInerney/Invoke-Cats
 
-tags: windows redteam pentest metasploit kiwi mimikatz privesc
+tags: #windows #redteam #pentest #metasploit #kiwi #mimikatz #privesc 

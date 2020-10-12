@@ -35,4 +35,4 @@ import pdb; pdb.set_trace()
 for attr, value in vars(k).items():
     print(attr, '=', value)
 
-tags: python snippets
+tags: #python #snippets 

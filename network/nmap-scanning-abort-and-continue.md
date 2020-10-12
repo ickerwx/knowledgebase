@@ -7,4 +7,4 @@ knowledgebase/network/nmap-scanning.sh 192.168.56.0/24
 knowledgebase/network/nmap-scanning.sh <directory-to-previous-scan> [PORTCOUNT i.e. 65535]
 
 
- tags: nmap scanning
+tags: #nmap #scanning 

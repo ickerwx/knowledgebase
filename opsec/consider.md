@@ -10,4 +10,4 @@ Use _strong_ passwords.
 * sqlmap in home folder under /.sqlmap
 * responder in its installation folder
 
-tags: opsec sqlmap clean responder
+tags: #opsec #sqlmap #clean #responder 

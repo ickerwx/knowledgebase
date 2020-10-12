@@ -1,4 +1,4 @@
 # Common Esoteric Languages
 
 
-tags: [esoteric languages] ctf
+tags: #esoteric_languages #ctf 

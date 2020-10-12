@@ -47,4 +47,4 @@ oder
 :set shell=/bin/bash:shell
 ```
 
-tags: pentest linux upgrade shell spawn
+tags: #pentest #linux #upgrade #shell #spawn 

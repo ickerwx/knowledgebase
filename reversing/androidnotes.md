@@ -4,4 +4,4 @@
 
 use [Bytecode Viewer](https://github.com/Konloch/bytecode-viewer) (also [here](https://bytecodeviewer.com/))
 
-tags: tools reversing android links
+tags: #tools #reversing #android #links 

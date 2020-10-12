@@ -13,4 +13,4 @@ Using netcat:
 Example:
 `mysql -u <user> -p'<password>' -D DATABASENAME -e "UPDATE `database` SET `field1` = '1' WHERE `id` = 1111;" > output.txt`
 
-tags: lateral linux
+tags: #lateral #linux 

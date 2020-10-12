@@ -14,4 +14,4 @@
 ## Smartcards
 * card reader/cloner *Proxmark3 RDV2*
 
-tags: hardware gadgets
+tags: #hardware #gadgets 

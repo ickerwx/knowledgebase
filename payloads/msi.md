@@ -58,4 +58,4 @@ pvk2pfx -pvk spc.pvk -spc spc.cer -pfx spc.pfx
 C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin>signtool sign /f spc.pfx <name>.msi
 ```
 
-tags: msi wix
+tags: #msi #wix 

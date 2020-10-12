@@ -37,4 +37,4 @@
 - [MS on pass the hash](http://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf)
 
 
-tags: windows pentest redteam mimikatz links
+tags: #windows #pentest #redteam #mimikatz #links 

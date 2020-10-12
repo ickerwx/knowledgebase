@@ -62,4 +62,4 @@ Looks for different buckets and downloads all content for analysis.
 ./bucket_finder.rb --region us my_words --download
 ```
 
-tags: osint github bucket shodan censys
+tags: #osint #github #bucket #shodan #censys 

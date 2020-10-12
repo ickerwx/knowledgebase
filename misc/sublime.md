@@ -6,4 +6,4 @@
 ## Edit multiple lines
 `marking line   --> ctrl + shift + l`
 
-tags: sublime cheat marking
+tags: #sublime #cheat #marking 

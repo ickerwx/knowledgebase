@@ -16,4 +16,4 @@ fastboot flash vendor vendor.img
 fastboot reboot
 ```
 
-tags: hardware rene android fastboot cheat
+tags: #hardware #rene #android #fastboot #cheat 

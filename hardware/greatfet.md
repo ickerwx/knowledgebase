@@ -45,4 +45,4 @@ Found a GreatFET One!
   Serial number: xxxxxxxxxxxxxxxxxxx
 ```
 
-tags: hardware [greatfet one] usb links rene
+tags: #greatfet_one #hardware #usb #links #rene 

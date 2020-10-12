@@ -12,4 +12,4 @@ loadkeys de
  apt-get install console-data
 ```
 
-tags: keyboard layout
+tags: #keyboard #layout 

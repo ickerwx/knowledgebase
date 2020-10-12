@@ -112,4 +112,4 @@ tcpdump -i eth0 arp or port 67 or port 68 -e -n -w dhcp.pcap
 tcpdump -ttttnnr dhcp.pcap
 ```
 
-tags: wireshark windows netsh sniffing admin netmon links [decrypt https] ssl https
+tags: #decrypt_https #wireshark #windows #netsh #sniffing #admin #netmon #links #ssl #https 

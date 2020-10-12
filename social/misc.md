@@ -23,4 +23,4 @@ Automated phishing mails. There is also phishing-frenzy (ruby) and king-phisher 
 * for hta payloads (https://github.com/nccgroup/demiguise) `python demiguise.py -k hello -c "cmd.exe /c <pscommand>" -o Outlook.Application -o test.hta`
 * jenkins exploit via (https://github.com/cheetz/generateJenkinsExploit)
 
-tags: [social engineering]
+tags: #social_engineering 

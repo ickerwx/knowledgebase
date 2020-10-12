@@ -6,4 +6,4 @@ ich arbeite gerade mit einem Nessus-Export in Form einer CSV-Datei. Excel hat da
 Falls ihr diese Probleme mal haben solltet: csv-Datei mit einem Editor öffnen und am Dateianfang eine neue Zeile hinzufügen:
 sep=,
 
-tags: nessus [vulnerability assessment]
+tags: #vulnerability_assessment #nessus 

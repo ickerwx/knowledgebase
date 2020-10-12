@@ -4,4 +4,4 @@
 xrandr --output LVDS1 --mode REALXxREALY --fb TARGETXxTARGETY --panning TARGETXxTARGETY
 ```
 
-tags: linux snippets x11
+tags: #linux #snippets #x11 

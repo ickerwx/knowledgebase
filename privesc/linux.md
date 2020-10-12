@@ -144,4 +144,4 @@ define PAGE_SIZE sysconf(_SC_PAGE_SIZE)
 * https://www.cprogramming.com/tutorial/shared-libraries-linux-gcc.html
 * https://www.boiteaklou.fr/Abusing-Shared-Libraries.html#but-can-we-exploit-it
 
-tags: [privilege escalation] linux privesc
+tags: #privilege_escalation #linux #privesc 

@@ -14,4 +14,4 @@ The CPU has a special register, the `CONTROL` register. Only the last three bits
  - [1] SPSEL: stack pointer select, 0 MSP, 1 PSP
  - [0] nPRIV: privilege level: 0 privileged, 1 unprivileged
 
-tags: hardware stm32 rene
+tags: #hardware #stm32 #rene 

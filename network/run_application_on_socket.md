@@ -10,4 +10,4 @@ mkfifo mypipe
 while true; do nc -vv -l -s 127.0.0.1 -p 9026 < mypipe  | ./app > mypipe ; done
 ```
 
-tags: socket nc mkfifo pipe
+tags: #socket #nc #mkfifo #pipe 

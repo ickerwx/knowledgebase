@@ -8,4 +8,4 @@ ea = ScreenEA()
 for f in Functions(SegStart(ea), SegEnd(ea)):
     print "%s (0x%x)" % (GetFunctionName(f), f)
 ```
-tags: reversing [ida pro] python snippets
+tags: #ida_pro #reversing #python #snippets 

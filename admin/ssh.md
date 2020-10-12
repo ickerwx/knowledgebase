@@ -85,4 +85,4 @@ root@jumphost:~# usermod -L support1 # lock the account
 root@jumphost:~# pkill -9 -u support1 # be sure all sessions are killed
 ```
 
-tags: windows linux admin ssh pentest putty vmware
+tags: #windows #linux #admin #ssh #pentest #putty #vmware 

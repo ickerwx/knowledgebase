@@ -101,4 +101,4 @@ flash bank sam7x512.flash.0 at91sam7 0 0 0 0 sam7x.cpu 0 0 0 0 0 0 0 18432
 flash bank sam7x512.flash.1 at91sam7 0 0 0 0 sam7x.cpu 1 0 0 0 0 0 0 18432
 ```
 
-tags: hardware rfid proxmark3 jtag openocd links buspirate
+tags: #hardware #rfid #proxmark3 #jtag #openocd #links #buspirate 

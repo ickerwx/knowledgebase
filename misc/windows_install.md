@@ -32,4 +32,4 @@ https://github.com/corelan/mona.git and place into immunity/PyCommands folder
 * virtualenvwrapper
 * angr
 
-tags: tools install windows
+tags: #tools #install #windows 

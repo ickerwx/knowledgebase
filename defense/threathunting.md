@@ -20,4 +20,4 @@
                  +------------+          
 ```
 
-tags: blueteam [Threat Hunting]
+tags: #threat_hunting #blueteam 

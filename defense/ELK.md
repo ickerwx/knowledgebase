@@ -34,4 +34,4 @@ curl -XDELETE 'localhost:9200/_all'
 curl -XGET localhost:9200/indexname/_count?q=*
 ```
 
-tags: blueteam ELK elasticsearch logstash
+tags: #blueteam #elk #elasticsearch #logstash 

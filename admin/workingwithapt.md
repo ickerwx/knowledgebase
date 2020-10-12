@@ -4,4 +4,4 @@
 
 `apt` writes its history in `/var/log/apt/history.log`.
 
-tags: admin apt linux
+tags: #admin #apt #linux 

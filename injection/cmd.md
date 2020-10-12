@@ -7,4 +7,4 @@ python2 commix.py --url="http://<url>:<port>/" --auth-type=basic --auth-cred='<u
 ```
 Possible values for techiques are 'classic','eval-based', 'time-based' or 'file-based'.
 
-tags: command injection commix
+tags: #command #injection #commix 

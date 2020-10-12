@@ -8,4 +8,4 @@ objdump -R ./executable
 objdump -d -j .plt ./executable
 ```
 
-tags: linux reversing objdump rene
+tags: #linux #reversing #objdump #rene 

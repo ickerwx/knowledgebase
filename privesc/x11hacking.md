@@ -193,4 +193,4 @@ http://x8x.net/2014/09/16/x11-pentesting-techniques/
 http://pipefish.me/2012/08/28/spying-on-screens-and-keystrokes-the-dangers-of-open-x11/
 http://colesec.inventedtheinternet.com/more-x11-hacking-with-xspy-and-xwatchwin/
 
-tags: Linux Links Pentest
+tags: #linux #links #pentest 

@@ -24,4 +24,4 @@ for i in proc sys dev; do mount --rbind /$i /mnt/$i ; done
 chroot /mnt
 ```
 
-tags: admin linux
+tags: #admin #linux 

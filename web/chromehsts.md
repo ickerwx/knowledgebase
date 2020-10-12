@@ -2,4 +2,4 @@
 
 chrome://net-internals/#hsts
 
-tags: chrome hsts admin webapp
+tags: #chrome #hsts #admin #webapp 

@@ -7,4 +7,4 @@ Often Redirection into files (`>`,`>>`) is not allowed, often bypassable via:
 ## Reads
 https://fireshellsecurity.team/restricted-linux-shell-escaping-techniques/
 
-tags: ctf pentest links
+tags: #ctf #pentest #links 

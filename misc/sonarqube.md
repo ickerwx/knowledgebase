@@ -24,4 +24,4 @@ c:\Path\to\sonar-scanner-3.0.3.778-windows\bin\sonar-scanner.bat
 ```
 Haven't used in on linux, will probably work the same
 
-tags: pentest [source code audit] sonarqube
+tags: #source_code_audit #pentest #sonarqube 

@@ -87,4 +87,4 @@ From Windows Credential Store:
 * Gathering Windows Credentials (https://github.com/peewpw/Invoke-WCMDump/blob/master/Invoke-WCMDump.ps1)
 
 
-tags: empire relaying bloodhound powerview
+tags: #empire #relaying #bloodhound #powerview 

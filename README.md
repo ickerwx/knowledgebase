@@ -17,12 +17,12 @@ Each note should start with a heading and end with a tag line:
 # A heading
 Some Text
 
-tags: tag1 [tag number 2] tag3
+tags: #tag1 #tag_number_2 #tag3
 ```
 
 ## Tags
 
-You can run `./scripts/createtaglist` to create a `tags` folder containing index files. So if you are looking for notes tagged with `linux`, open `tags/linux.md` and you will find links to all of these notes.
+You can run `./scripts/createtaglist` to create a `tags` folder containing index files. So if you are looking for notes tagged with `#linux`, open `tags/linux.md` and you will find links to all of these notes.
 
 Search for `systemd` to find unit and timer files to support automatic and periodic update of tag files
 
@@ -36,11 +36,11 @@ If you put `$KBHOME/scripts` in your `PATH`, you can run a few scripts that help
 
 ### createtaglist
 
-Run this to parse the `tags:` line from your notes and write index files into the `tags` folder. This will create markdown files with links to each file that uses the tag. To see all notes tagged with `android`, look at `tags/android.md`:
+Run this to parse the `tags:` line from your notes and write index files into the `tags` folder. This will create markdown files with links to each file that uses the tag. To see all notes tagged with `#android`, look at `tags/android.md`:
 
 ```
 $ cat tags/android.md
-# Notes tagged with android
+# Notes tagged with #android
 [Notes about reversing on Android](<snip>/reversing/androidnotes.md)
 [Android Applications Reversing 101](<snip>/reversing/androidreversing101.md)
 ```
@@ -106,7 +106,7 @@ $ search vpn
 6: 
 
 26: 
-27: tags: links pentest ssh vpn linux webapp
+27: tags: #links #pentest #ssh #vpn #linux #webapp
 +=~----------
 | 1:  <snip>/blueteam/blocklanturtle.md
 +=~----------
@@ -119,7 +119,7 @@ Enter number to open or anything else to quit:
 $ search -t vpn
 +=~----------
 |/home/rene/code/knowledgebase/tags/vpn.md
-| # Notes tagged with vpn
+| # Notes tagged with #vpn
 +=~----------
 ┌─ 0:  <snip>/pentest/links.md
 └─ Useful pentest links

@@ -70,4 +70,4 @@ telnet:
 view-source:
 ```
 
-tags: windows pentest citrix links
+tags: #windows #pentest #citrix #links 

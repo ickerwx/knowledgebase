@@ -66,4 +66,4 @@ Requires brute-force attack to recover password Cisco Type 7 Password: These pas
 
 * http://www.hope.co.nz/projects/tools/ciscopw.php
 
-tags: cisco pentest ios [cisco asa] links
+tags: #cisco_asa #cisco #pentest #ios #links 

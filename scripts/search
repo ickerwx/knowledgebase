@@ -44,6 +44,8 @@ def printSearchResults(filelist, args):
                 match = re.match('\[(.*?)\]\((.*?)\)', line)
                 if match is not None:
                     title, filepath = match.groups()
+                    if 'KBHOME' in os.environ.keys():
+                        filepath = filepath.replace('../', os.environ['KBHOME'])
                     resultFiles.append(filepath)
                     filename = colored(os.path.basename(filepath), 'blue')
                     filepath = filepath[:filepath.rfind(os.path.basename(filepath))] + filename

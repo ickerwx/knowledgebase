@@ -56,4 +56,4 @@ As Fail condition you can set :<string>, or you can set :S=302 if you want to co
 hydra -l root -p admin 192.168.1.105 -t 4 ssh
 hydra -L user.txt -P passwords.txt 192.168.1.105 ssh
 ```
-tags: passwords crackings hydra hashcat john
+tags: #passwords #crackings #hydra #hashcat #john 

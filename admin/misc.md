@@ -22,4 +22,4 @@ xfreerdp /u:<user> /v:<ip> +clipboard
 ## Activate Windows XP for 30 days
 Boot into SafeMode and run `rundll32.exe syssetup,SetupOobeBnk` to get 30 days activation
 
-tags: tmux rdp misc
+tags: #tmux #rdp #misc 

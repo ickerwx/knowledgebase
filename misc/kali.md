@@ -34,4 +34,4 @@ ln -sf /usr/local/sbin/restart-vm-tools /root/Desktop/restart-vm-tools
 gsettings set org.gnome.nautilus.preferences executable-text-activation 'ask'
 ```
 
-tags: kali vm vmware shared folders
+tags: #kali #vm #vmware #shared #folders 

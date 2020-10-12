@@ -119,4 +119,4 @@ While PSExec and all its SMB goodness has arguably been the lateral movement tec
 
 //Special thanks to Raphael Mudge (@armitagehacker) and OJ Reeves (@thecolonial)  for their assistance during the creation of this blog post!//
 
-tags: Links Pentest Windows
+tags: #links #pentest #windows 

@@ -49,4 +49,4 @@ http://www.xss-payloads.com/payloads-list.html?c#category=capture
 
 XSS that is put into variables that rendered back into the page, strictly on the client side.
 
-tags: xss cookies
+tags: #xss #cookies 

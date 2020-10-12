@@ -5,4 +5,4 @@ iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT
 iptables -A FORWARD -j ACCEPT
 ```
 
-tags: forwarding [ip forwarding]
+tags: #ip_forwarding #forwarding 

@@ -38,4 +38,4 @@ nmap -p 8585 -sV –script http-methods,http-trace –script-args http-methods.t
 ```
 
 
-tags: http gobuster dirb web friendzone
+tags: #http #gobuster #dirb #web #friendzone 

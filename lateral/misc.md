@@ -17,4 +17,4 @@ arp-scan -l | tee arp.txt
 python gateway-finder.py -f arp.txt -i 209.85.227.99
 ```
 
-tags: misc gateway 
+tags: #misc #gateway 

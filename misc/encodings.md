@@ -6,4 +6,4 @@ Hex values from string:
 Hex values (or string) to binary:
 `echo ".." | xxd -r -p`
 
-tags: encode xxd base64
+tags: #encode #xxd #base64 

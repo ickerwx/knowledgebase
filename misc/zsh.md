@@ -5,4 +5,4 @@
 setopt +o nomatch
 ```
 
-tags: zsh 
+tags: #zsh 

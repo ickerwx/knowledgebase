@@ -25,4 +25,4 @@ error: failed retrieving file 'xxxx.pkg.tar.xz' from some.mirror : Could not res
 
 `sudo pacman -Syu XXXX`
 
-tags: arch debug boot install
+tags: #arch #debug #boot #install 

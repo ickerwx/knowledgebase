@@ -31,4 +31,4 @@ sudo apt-get install cifs-utils
 mount -t cifs //10.10.10.134/Backups -o user=guest,password= /mnt/backups
 ```
 
-tags: christian smb linux
+tags: #christian #smb #linux 

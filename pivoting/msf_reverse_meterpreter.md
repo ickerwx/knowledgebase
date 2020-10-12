@@ -42,4 +42,4 @@ run
 cp /etc/proxychains.conf .
 proxychains nmap -Pn -n -sT 172.20.214.10 -sV --version-all | grep -v " <--denied\|NSOCK INFO" | tee -a pivot-scan.log
 
-tags: proxychains ssh
+tags: #proxychains #ssh 

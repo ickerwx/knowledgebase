@@ -20,4 +20,4 @@ keytool -importkeystore -srckeystore foo.jks -srcalias "alias shown with -list" 
 keytool -importcert -file cert.pem -keystore keystore.jks -alias "something"
 ```
 
-tags: admin cheat keytool
+tags: #admin #cheat #keytool 

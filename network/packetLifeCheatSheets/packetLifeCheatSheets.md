@@ -55,4 +55,4 @@ see VOIP_Basics.pdf
 # Wireshark_Display_Filters
 see Wireshark_Display_Filters.pdf
 
-tags: networking network bgp cisco [common ports] ieee wlan 802.1X IOS IPsec ipv4 ipv6 NAT OSPF QoS RIP scapy spt tcpdump vlan voip wireshark
+tags: #common_ports #networking #network #bgp #cisco #ieee #wlan #802.1x #ios #ipsec #ipv4 #ipv6 #nat #ospf #qos #rip #scapy #spt #tcpdump #vlan #voip #wireshark 

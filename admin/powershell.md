@@ -432,4 +432,4 @@ Get-Command -CommandType cmdlet
 Get-Command -Module <modulename>
 ```
 
-tags: windows snippets pentest wmi powershell audit netsh firewall taskkill vmware links
+tags: #windows #snippets #pentest #wmi #powershell #audit #netsh #firewall #taskkill #vmware #links 

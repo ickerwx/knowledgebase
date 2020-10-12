@@ -54,4 +54,4 @@ Reset to exit
 Are you sure? y
 ```
 
-tags: hardware pentest reversing
+tags: #hardware #pentest #reversing 

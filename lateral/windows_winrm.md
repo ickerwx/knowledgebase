@@ -36,4 +36,4 @@ conn.shell(:powershell) do |shell|
 
 There is also python versions with `community/python-pywinrm 0.3.0-2` and `community/python2-pywinrm 0.3.0-2`
 
-tags: winrm
+tags: #winrm 

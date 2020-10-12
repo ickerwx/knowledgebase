@@ -57,4 +57,4 @@ git config --local http.sslKey certs/key.pem
 git config --local http.sslVerify false or maybe don't do that
 ```
 
-tags: programming git cheat
+tags: #programming #git #cheat 

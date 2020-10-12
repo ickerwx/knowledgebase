@@ -360,4 +360,4 @@ _start:
 | rt_tgsigqueueinfo      | 363    |
 | perf_event_open        | 364    |
 
-tags: hardware arm linux syscall programming
+tags: #hardware #arm #linux #syscall #programming 

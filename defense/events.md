@@ -195,4 +195,4 @@ winrm get winrm/config
 
 
 
-tags: blueteam windows events siem wmi links services applocker splunk nsa work rene winrm cheat todo
+tags: #blueteam #windows #events #siem #wmi #links #services #applocker #splunk #nsa #work #rene #winrm #cheat #todo 

@@ -9,4 +9,4 @@ hm.txt:root.txt:$DATA
 more < hm.txt:root.txt
 
 
-tags: wget ftp linux
+tags: #wget #ftp #linux 

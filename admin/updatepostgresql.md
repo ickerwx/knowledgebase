@@ -12,4 +12,4 @@ su - postgres -c "initdb --locale $LANG -E UTF8 -D /var/lib/postgres/data"
 su - postgres -c "pg_upgrade -b /opt/pgsql-${FROM_VERSION}/bin/ -B /usr/bin/ -d /var/lib/postgres/data-${FROM_VERSION} -D /var/lib/postgres/data"
 ```
 
-tags: misc admin linux
+tags: #misc #admin #linux 

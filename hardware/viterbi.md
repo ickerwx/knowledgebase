@@ -32,4 +32,4 @@ avrdude: ERROR: address 0x800519 out of range at line 1756 of <snip>
 
 The reason for this seems to be avr-gcc. The current version was `avr-gcc-8.2.0-1-x86_64`. After downgrading to `avr-gcc-8.1.0-1-x86_64` the error disappeared.
 
-tags: hardware qmk keyboards [pro micro] arduino avr viterbi avrdude
+tags: #pro_micro #hardware #qmk #keyboards #arduino #avr #viterbi #avrdude 

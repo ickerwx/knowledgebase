@@ -22,4 +22,4 @@ content=\newread\file
 \repeat
 ```
 
-tags: latex pentest
+tags: #latex #pentest 

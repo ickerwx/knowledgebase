@@ -38,4 +38,4 @@ Inside `./bwdata/` are various assets:
 
 Bitwarden creates nightly backups and keeps them for 30 days. The are in `./bwdata/mssql/backups`.
 
-tags: linux bitwarden admin passwords
+tags: #linux #bitwarden #admin #passwords 

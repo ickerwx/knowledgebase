@@ -84,4 +84,4 @@ In a nutshell, to fix jython jar processing and error messages
 1. Change the permissions which will allow all users to write to jython cachedir, chmod -R 777 /cachedir/
 2. Set the the jython registry (<JYTHON_HOME>/registry) property python.cachedir.skip = true.
 
-tags: Linux Java Python Jython
+tags: #linux #java #python #jython 

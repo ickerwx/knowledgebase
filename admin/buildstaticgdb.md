@@ -8,4 +8,4 @@ You can use the following options for configure script to generate a static GDB 
 ./configure --enable-static=yes && make && make install
 ```
 
-tags: linux reversing
+tags: #linux #reversing 

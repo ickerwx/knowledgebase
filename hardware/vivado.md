@@ -27,4 +27,4 @@ source /opt/Xilinx/Vivado/2019.2/settings64.sh
 
 steht im Wesentlichen alles [hier](https://wiki.archlinux.org/index.php/Xilinx_Vivado) beschrieben
 
-tags: hardware fpga xlinix rene linux links
+tags: #hardware #fpga #xlinix #rene #linux #links 

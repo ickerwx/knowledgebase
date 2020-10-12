@@ -103,4 +103,4 @@ John Levine [Linkers and Loaders](http://www.iecc.com/linker/)
 Bus Error an stelle `<main+20> bkpt 0x0000` - es wird ein Breakpoint gesetzt, CPU geht in Debug state, 0x0000 am Ende ist optional
 `set $pc=0xXXXX` setzt den program counter auf die Instruktion danach.
 
-tags: hardware reversing training notes
+tags: #hardware #reversing #training #notes 

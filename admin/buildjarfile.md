@@ -9,4 +9,4 @@ $ jar -cfe Foo.jar Foo Foo.class
 * ```Foo```: entry point, Klasse mit ```public static void main()```
 * ```Foo.class [...]```: packe alle genannten Resourcen in das jar file
 
-tags: Java
+tags: #java 

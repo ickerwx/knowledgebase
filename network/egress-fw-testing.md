@@ -12,4 +12,4 @@ iptables -F # to clean up lateron
 EXFILL="127.0.0.1";rm ./donetcat ;for e in {0..65536};do echo "sleep 0.1; echo 'PORT-$e';nc $EXFILL $e &" >> donetcat ; done ; bash ./donetcat
 ```
 
-tags: egress firewall
+tags: #egress #firewall 

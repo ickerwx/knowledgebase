@@ -130,4 +130,4 @@ openssl pkcs12 -in file.pfx -nocerts -nodes -out key.pem
 openssl pkcs12 -in file.pfx -cacerts -nokeys -out ca.crt
 ```
 
-tags: linux snippets python openssl postgresql awk
+tags: #linux #snippets #python #openssl #postgresql #awk 

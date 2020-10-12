@@ -12,4 +12,4 @@ modutil -dbdir sql:.pki/nssdb -add "bdr yubikey" -libfile /usr/lib/opensc-pkcs11
 modutil -dbdir sql:.pki/nssdb -list
 ```
 
-tags: admin yubikey modutil smartcard linux cheat
+tags: #admin #yubikey #modutil #smartcard #linux #cheat 

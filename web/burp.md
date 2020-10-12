@@ -22,4 +22,4 @@ When changing from GET to POST do it through BURPs context Menu - doing it manua
 
 Also some websites really dont like burp and the only way to talk properly to them is to disable it.
 
-tags: pentest Burpsuite java openssl webapp firefox
+tags: #pentest #burpsuite #java #openssl #webapp #firefox 

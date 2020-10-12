@@ -23,4 +23,4 @@ ntrst:pin3 tck:pin9 tms:pin7 tdo:pin11 tdi:pin5 IR length: 4
 * Verbindung mit OpenOCD hergestellt
 * ```dump_memory rom 0x00000000 0x10000000``` ergibt Firmware Image in Datei ```rom```
 
-tags: hardware jtag reversing
+tags: #hardware #jtag #reversing 

@@ -6,4 +6,4 @@ apt install csvtool
 csvtool readable filename | view -
 ```
 
-tags: csv csvtool 
+tags: #csv #csvtool 

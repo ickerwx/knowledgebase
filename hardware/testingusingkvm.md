@@ -48,4 +48,4 @@ This SQL injection CVE-2017-8835 finally allowed us access to the device as long
 Author: Eric Sesterhenn
 Date: 2017-06-05 00:00:00 +0200
 
-tags: Hardware Pentest Links
+tags: #hardware #pentest #links 

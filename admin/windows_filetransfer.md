@@ -307,4 +307,4 @@ via-kioskBreakOut-hta-rwxl.hta
 ## links
 * https://www.jollyfrogs.com/transfer-files-windows/
 
-tags: windows certutil bitsadmin links pentest admin cmdln32
+tags: #windows #certutil #bitsadmin #links #pentest #admin #cmdln32 

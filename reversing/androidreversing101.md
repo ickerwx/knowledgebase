@@ -354,4 +354,4 @@ There’re already a lot of [user contributed modules](http://repo.xposed.info/m
 ## Conclusion
 I hope you’ll find this reference guide useful for your Android reversing adventures, keep in mind that the most important thing while reversing is not the tool you’re using, but how you use it, so you’ll have to learn how to choose the appropriate tool for your scenario and this is something you can only learn with experience, so enough reading and start reversing! :D
 
-tags: android reversing links
+tags: #android #reversing #links 

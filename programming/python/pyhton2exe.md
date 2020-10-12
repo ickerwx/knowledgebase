@@ -24,4 +24,4 @@ patator\dist\patator.exe -h
 
 The resulting stand-alone `patator.exe` executable was confirmed to run successfully on Windows 2003 (5.2.3790), Windows 7 (6.1.7600), Windows 2008 R2 SP1 (6.1.7601) and Windows 2012 R2 (6.3.9600).
 
-tags: python exe
+tags: #python #exe 

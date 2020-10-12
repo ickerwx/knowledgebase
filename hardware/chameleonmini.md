@@ -57,4 +57,4 @@ LOGDOWNLOAD
 
 The above will switch the chameleon into reader mode, tell it to store the log in memory, then clear the current log. `RBUTTON` will cycle through the settings slots, `LBUTTON` will move the log from SRAM to permanent memory. `LOGDOWNLOAD` will download the log...
 
-tags: hardware rfid [chameleon mini]
+tags: #chameleon_mini #hardware #rfid 

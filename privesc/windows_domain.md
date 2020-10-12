@@ -31,4 +31,4 @@ Another way is to change user passwords via meterpreters `change_password` funct
 SPNs are used by kerberos to associate service with logon account. The command `setspn -T <domain> -F -Q */*` gives information about services running on a domain controller, hostnames, ports, etc.
 
 
-tags: windows [privilege escalation] domain
+tags: #privilege_escalation #windows #domain 

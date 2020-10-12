@@ -66,4 +66,4 @@ wmiexec.vbs /cmd host user pass whoami
 ## Videos about WMI
 - [Abusing Windows Management Instrumentation (@mattifestation, BH2015)](https://www.youtube.com/watch?v=0SjMgnGwpq8)
 
-tags: windows wmi pentest blueteam redteam powershell talk blackhat
+tags: #windows #wmi #pentest #blueteam #redteam #powershell #talk #blackhat 

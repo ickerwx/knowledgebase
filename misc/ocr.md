@@ -11,4 +11,4 @@ tesseract hashes.jpg hashes
 ```
 
 
-tags: ocr tesseract christian
+tags: #ocr #tesseract #christian 

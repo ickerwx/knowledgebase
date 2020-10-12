@@ -27,4 +27,4 @@ show variables like "secure_file_priv";
 #
 
 
-tags: wordpress phpmyadmin
+tags: #wordpress #phpmyadmin 

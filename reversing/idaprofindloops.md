@@ -157,4 +157,4 @@ def doit():
     print "[+] I think %s could be memcpy or memset" % hex(functs_with_loops[0][0])
 ```
 
-tags: reversing [ida pro] python snippets
+tags: #ida_pro #reversing #python #snippets 

@@ -2,4 +2,4 @@
 
 ## via Metasploit
 
-tags: windows registry
+tags: #windows #registry 

@@ -21,4 +21,4 @@ zE deletes all folds.
 ]z move to end of open fold.
 ```
 
-tags: vim admin
+tags: #vim #admin 

@@ -48,8 +48,8 @@ def createTagFiles(filelist):
                 taglist[tag] = [(title, f)]
 
     for tag in taglist.keys():
-        h = open(tag + '.md', 'w')
-        h.write('# Notes tagged with %s\n' % tag)
+        h = open(tag.lstrip('#') + '.md', 'w')
+        h.write('# Notes tagged with #%s\n' % tag.lstrip('#'))
         for title, filename in taglist[tag]:
             h.write("[{}]({})\n".format(title.strip(), filename))
         h.close()

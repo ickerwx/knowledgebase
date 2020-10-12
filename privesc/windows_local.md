@@ -149,4 +149,4 @@ Pay attention to the -Outfile it is very much needed
 
 * https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/
 
-tags: privesc [privilege escalation] windows powershell iex
+tags: #privilege_escalation #privesc #windows #powershell #iex 

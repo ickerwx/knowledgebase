@@ -32,4 +32,4 @@ $ arm_now start mips32el
 press "Ctrl+]"
 ```
 
-tags: hardware links reversing arm qemu
+tags: #hardware #links #reversing #arm #qemu 

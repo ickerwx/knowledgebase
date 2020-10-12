@@ -22,4 +22,4 @@ trigger: Path is shown under Media > Library > File  --> wp-content/uploads/Year
 e.g akismet plugin
 
 trigger: wp-content/plugins/akismet/akismet.php
-tags: wget ftp linux
+tags: #wget #ftp #linux 

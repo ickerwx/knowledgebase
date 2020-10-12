@@ -19,4 +19,4 @@ powershell -version 2
 get-aduser -filter 'passwordneverexpires -eq "true" -and enables -eq "true"' | select samaccountname
 ```
 
-tags: windows pentest recon enumeration
+tags: #windows #pentest #recon #enumeration 

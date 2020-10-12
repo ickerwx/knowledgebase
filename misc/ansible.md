@@ -33,4 +33,4 @@ $ export ANSIBLE_STDOUT_CALLBACK=debug
     dest: "/remote/home/test/file"
 ```
 
-tags: ansible
+tags: #ansible 

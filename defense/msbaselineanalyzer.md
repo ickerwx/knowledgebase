@@ -8,4 +8,4 @@ Führe MSBA aus in Admin-Shell mit entsprechenden credentials
 
 ```C:\Program Files\Microsoft Baseline Security Analyzer \mbsacli.exe /target IP /u USER /p PASS /wi /nvc /nd```
 
-tags: [vulnerability assessment] windows audit
+tags: #vulnerability_assessment #windows #audit 
