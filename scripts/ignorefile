@@ -5,7 +5,7 @@
 README.md
 template.md
 templates/
-tags/
+.tags/
 .git/
 
 # you can add custom entries after this line

@@ -9,12 +9,12 @@ def createTagFiles(filelist):
     # this function reads the first line (Title) and last line (tags)
     # from each file and creates tag files that link to the respective
     # target file
-    if 'tags' not in os.listdir():
+    if '.tags' not in os.listdir():
         # we should be inside the knowledgebase root folder by now
         # if not, something broke, sorry ...
         print('tags directory not found, creating')
-        os.mkdir('tags')
-    os.chdir('tags')
+        os.mkdir('.tags')
+    os.chdir('.tags')
 
     # delete existing tag files
     for f in os.listdir():

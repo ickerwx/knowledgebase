@@ -40,13 +40,13 @@ def createFileList(tags=False):
     filelist = []
 
     if tags is True:
-        path = os.path.join(os.getcwd(), 'tags')
+        path = os.path.join(os.getcwd(), '.tags')
     else:
         path = os.getcwd()
     for root, dirs, files in os.walk(path):
         ignoreFolder = False
         for folder in ignoreFolderList:
-            if folder in root and not (tags is True and folder == 'tags'):
+            if folder in root and not (tags is True and folder == '.tags'):
                 ignoreFolder = True
                 break
 
