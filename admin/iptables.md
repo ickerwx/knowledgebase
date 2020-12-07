@@ -1,5 +1,10 @@
 # iptables
 
+## Port Forwarding
+```
+iptables -t nat -I PREROUTING 1 -p tcp --dport 10001 -j DNAT --to-destination 127.0.0.1:1000
+```
+
 ## NAT
 
 Enable ip forwarding:
@@ -13,13 +18,18 @@ iptables -A FORWARD -i eth1 -o eth2 -j ACCEPT
 ```
 
 ## Drop by Port
+```
 iptables -A INPUT -j DROP -p tcp --destination-port 902
+```
 
 ## Save Current rules - will be loaded by systemd on boot
+```
 iptables-save > /etc/iptables/iptables.rules
+```
 
 ## Restore them manualy
+```
 iptables-restore < /etc/iptables/iptables.rules
-
+```
 
 tags: #iptables 

