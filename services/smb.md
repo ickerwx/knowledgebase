@@ -31,4 +31,12 @@ sudo apt-get install cifs-utils
 mount -t cifs //10.10.10.134/Backups -o user=guest,password= /mnt/backups
 ```
 
+## automount cifs share using /etc/fstab and systemd
+
+Append the following text to the mount options in `/etc/fstab`:
+
+```
+,x-systemd.automount,x-systemd.requires=network-online.target
+```
+
 tags: #christian #smb #linux 
