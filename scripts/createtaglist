@@ -27,7 +27,27 @@ def createTagFiles(filelist):
         h = open(f, 'r')
         lines = h.readlines()
         h.close()
-        if not (lines[0].strip().startswith('#') and lines[-1].strip().startswith('tags:')):
+        header_wrong = False
+        trailer_wrong = False
+        # check if first non-empty line starts with a heading
+        for l in lines:
+            if len(l.strip()) == 0:
+                # line is empty, check next line
+                continue
+            if not l.strip().startswith('#'):
+                header_wrong = True
+            break
+        
+        # check if last non-empty line is a tags: line
+        for l in lines[::-1]:
+            if len(l.strip()) == 0:
+                # line is empty, check previous line
+                continue
+            if not l.strip().startswith('tags:'):
+                trailer_wrong = True
+            break
+
+        if header_wrong or trailer_wrong:
             # if the file we just read doesn't have a heading at the start and a line
             # starting with tags: at the end, we don't want to build an index for it
             print("%s doesn't follow the formatting rules, skipping..." % f)

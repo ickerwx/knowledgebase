@@ -9,3 +9,5 @@ templates/
 .git/
 
 # you can add custom entries after this line
+meeting notes/
+zettelkasten/
