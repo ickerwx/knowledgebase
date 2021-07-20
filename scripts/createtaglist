@@ -52,8 +52,10 @@ def createTagFiles(filelist):
             # starting with tags: at the end, we don't want to build an index for it
             print("%s doesn't follow the formatting rules, skipping..." % f)
             continue
-
-        title = lines[0].strip().lstrip('#')  # every file starts with a title, remove leading # and whitespaces
+        try:
+            title = lines[0].strip().lstrip('#')  # every file starts with a title, remove leading # and whitespaces
+        except:
+            print(f)
 
         tagline = lines[-1].strip().lstrip('tags:')  # last line contains the tags
         tags = [tag.lower() for tag in re.findall("\[(.*?)]", tagline)]  # find all tags inside []
@@ -68,7 +70,7 @@ def createTagFiles(filelist):
                 taglist[tag] = [(title, f)]
 
     for tag in taglist.keys():
-        h = open(tag.lstrip('#') + '.md', 'w')
+        h = open(tag.replace('/', '_').lstrip('#') + '.md', 'w')
         h.write('# Notes tagged with #%s\n' % tag.lstrip('#'))
         for title, filename in taglist[tag]:
             h.write("[{}]({})\n".format(title.strip(), filename))
