@@ -38,4 +38,13 @@ Inside `./bwdata/` are various assets:
 
 Bitwarden creates nightly backups and keeps them for 30 days. The are in `./bwdata/mssql/backups`.
 
+## bitwarden-rofi
+
+Sometimes bitwarden-rofi gives the error "Could not load items". This can be fixed by running
+
+```cheat bitwarden Fix load items error
+keyctl purge user bw_session
+```
+
+
 tags: #linux #bitwarden #admin #passwords 
